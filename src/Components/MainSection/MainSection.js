@@ -18,6 +18,7 @@ function MainSection() {
     const handleSubmit = () => {
         setSearchTerm(searchBar);
         console.log(searchTerm.toLowerCase());
+        // GetCoord(searchTerm);
     }
 
     const d = new Date();
