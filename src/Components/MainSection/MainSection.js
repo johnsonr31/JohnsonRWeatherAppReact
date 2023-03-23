@@ -9,6 +9,36 @@ function MainSection() {
     const [iconCode, setIconCode] = useState('');
     const [location, setLocation] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
+
+    const d = new Date();
+    let day = d.getDay();
+    let today = '';
+    console.log(day);
+
+    switch(day) {
+        case 0:
+            today = 'Sunday';
+            break;
+        case 1:
+            today = 'Monday';
+            break;
+        case 2:
+            today = 'Tuesday';
+            break;
+        case 3:
+            today = 'Wednesday';
+            break;
+        case 4:
+            today = 'Thursday';
+            break;
+        case 5:
+            today = 'Friday';
+            break;
+        case 6:
+            today = 'Saturday';
+            break;
+    }
+
     // async function GetWeather() {
     //     const data = await promise.json();
     //     weatherData = data;
@@ -101,7 +131,7 @@ function MainSection() {
             <Container>
                 <Row className='topWeather'>
                     <Col className='weatherDataLeft'>
-                        <h2>Today</h2>
+                        <h2>{today}</h2>
                         <h1>{Math.floor(temp)}°</h1>
                         <h2>{weather}</h2>
                         <h2>{location}</h2>

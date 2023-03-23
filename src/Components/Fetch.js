@@ -16,14 +16,11 @@ async function GetCoord() {
     const promise = await fetch(`api.openweathermap.org/data/2.5/weather?q=manteca${apiKey}`);
     const data = await promise.json();
     coordinates = data;
-
+    
     return coordinates;
 }
 
 async function GetWeather() {
-    GetCoord();
-    // lat = coordinates.coord.lat;
-    // lon = coordinates.coord.lon;
 
     const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}${apiKey}&units=imperial`);
     const data = await promise.json();
