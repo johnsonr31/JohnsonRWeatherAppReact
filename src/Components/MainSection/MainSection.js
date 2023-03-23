@@ -8,12 +8,22 @@ function MainSection() {
     const [temp, setTemp] = useState('');
     const [iconCode, setIconCode] = useState('');
     const [location, setLocation] = useState('');
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchBar, setSearchBar] = useState('');
+    const [searchTerm, setSearchTerm] = useState(searchBar);
+
+    const handleSearch = (e) => {
+        setSearchBar(e.target.value);
+    }
+
+    const handleSubmit = () => {
+        setSearchTerm(searchBar);
+        console.log(searchTerm.toLowerCase());
+    }
 
     const d = new Date();
     let day = d.getDay();
     let today = '';
-    console.log(day);
+    // console.log(day);
 
     switch(day) {
         case 0:
@@ -119,10 +129,10 @@ function MainSection() {
             <Container>
 
                 <Form className='searchBar'>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Control type="text" placeholder="Search for a Location" />
+                    <Form.Group className="mb-3">
+                        <Form.Control type="text" placeholder="Search for a Location" onChange={handleSearch}/>
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" onClick={handleSubmit}>
                         Search
                     </Button>
                 </Form>
