@@ -5,9 +5,154 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to bottom, #5ebcff, #9DD6FF, #9ac0da);
+  /* background-color: #9DD6FF !important; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.topWeather{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #4C6085;
+  border-radius: 1em;
+  height: 40em;
+}
+
+.weatherDataLeft{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFF;
+}
+
+.weatherDataRight{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFF;
+}
+
+.topBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  background-color: #4C6085;
+}
+
+.favoritesIcon{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.threeDays{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  color: #FFFF;
+  background-color: #4C6085;
+  border-radius: 1em;
+}
+
+.searchBar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.fiveDays{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.weatherDay{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: #FFFF;
+  background-color: #4C6085;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 1em 0em 1em 0em;
+}
+
+.favoritesItem{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1.5em 0em 1.5em 0em;
+}
+
+.favoritesList{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+@media (max-width: 425px) {
+  .topWeather{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4C6085;
+    border-radius: 1em;
+    height: 30em;
+  }
+
+  .weatherDataLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFF;
+  }
+  
+  .weatherDataRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFF;
+  }
+
+  .threeDays{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: #FFFF;
+    background-color: #4C6085;
+    border-radius: 1em;
+  }
+
+  .fiveDays{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
