@@ -55,6 +55,11 @@ function MainSection() {
                 </Modal.Header>
                 <Modal.Body>
                     <Container>
+                        <Row>
+                            <Col className="d-flex justify-content-center">
+                                <p>(These are placeholders)</p>
+                            </Col>
+                        </Row>
                         <Row className='favoritesList'>
                             <Col className='favoritesItem'>
                                 <h5>Stockton, CA</h5>
@@ -97,7 +102,7 @@ function MainSection() {
                 <Row className='topWeather'>
                     <Col className='weatherDataLeft'>
                         <h2>Today</h2>
-                        <h1>{temp}°</h1>
+                        <h1>{Math.floor(temp)}°</h1>
                         <h2>{weather}</h2>
                         <h2>{location}</h2>
                     </Col>
